@@ -33,7 +33,7 @@ void Paddle::updatePaddle(float dt, sf::Vector2f ballPos, sf::Vector2f ballVel, 
 			while (ballPos.x > 35 && ballPos.x < winSize.x - 35) {
 				++n;
 
-				if (ballPos.y < -r || ballPos.y >= winSize.y - r) {
+				if (ballPos.y <= r || ballPos.y >= winSize.y - r) {
 					ballPos.y -= ballVel.y * dt;
 					ballVel.y *= -1;
 				}

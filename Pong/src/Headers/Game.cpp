@@ -2,7 +2,7 @@
 
 Game::Game()
 {
-	player = new Paddle(Paddle::AI, sf::Vector2f(30, window->getSize().y / 2.0f), sf::Color::Red);
+	player = new Paddle(Paddle::player, sf::Vector2f(30, window->getSize().y / 2.0f), sf::Color::Red);
 	AI = new Paddle(Paddle::AI, sf::Vector2f(window->getSize().x - 30, window->getSize().y / 2.0f), sf::Color::Blue);
 
 	ball = new Ball(player, AI, 8.f);
